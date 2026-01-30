@@ -1,71 +1,81 @@
 import ProjectCard from "./ProjectCard";
 import projectEngine from "@/assets/project-engine.jpg";
-import projectVoxel from "@/assets/project-voxel.jpg";
-import projectPhysics from "@/assets/project-physics.jpg";
-import projectPlatformer from "@/assets/project-platformer.jpg";
+import projectRtype from "@/assets/project-rtype.gif";
+import projectRaytracer from "@/assets/project-raytracer.jpg";
+import projectPlatformer from "@/assets/project-2d-platformer.mov";
 
 const projects = [
   {
-    title: "Custom Game Engine",
-    description: "A lightweight 2D/3D game engine built from scratch in C++ with OpenGL rendering, ECS architecture, and custom physics.",
+    title: "Custom Game Engine (ECS)",
+    description: "A lightweight 2D/3D game engine built from scratch in C++ with SFML rendering, ECS architecture, and custom physics.",
     media: {
       type: "image" as const,
       src: projectEngine,
     },
-    tags: ["C++", "OpenGL", "ECS", "Custom Engine"],
+    tags: ["C++", "ECS", "SFML", "Engine Prog"],
     links: {
-      github: "#",
+      github: "https://github.com/HotAsWater/ECS-RType",
     },
   },
   {
-    title: "Voxel World Generator",
-    description: "Procedural voxel terrain generation with infinite worlds, chunk streaming, and optimized mesh generation.",
+    title: "Mutiplayer RType-Rebuild",
+    description: (
+      <>
+        Remaking the famous <span className="font-extrabold text-orange-300">RType</span> game in multiplayer using <span className="font-extrabold text-orange-300">UDP</span> and a <span className="font-extrabold text-orange-300">TCP</span> lobby in full <span className="font-extrabold text-orange-300">C++</span>, using <span className="font-extrabold text-orange-300">custom engine</span>. Using Cmake to port the game on MacOS, Linux (most distro) and Windows.<br /><br />
+        This was made in 2 month with a group of 5 dev.<br /> <br />
+        <span className="font-extrabold text-orange-300">What I made:</span> Full ECS, Games logic, Server Client network (UDP) logic.
+      </>
+    ),
     media: {
-      type: "image" as const,
-      src: projectVoxel,
+      type: "gif" as const,
+      src: projectRtype,
     },
-    tags: ["C++", "Vulkan", "Procedural Gen"],
+    tags: ["C++", "UDP", "TCP", "ECS", "SFML", "QT", "SFML", "Gameplay Programming", "Team Project"],
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/HotAsWater/ECS-RType",
+      demo: "https://youtu.be/2Fgwh5xcTw0",
     },
   },
   {
-    title: "Physics Sandbox",
-    description: "Real-time rigid body physics simulation with collision detection, constraints, and debug visualization.",
+    title: "RayTracer",
+    description: (
+      <>
+        Creation of a RayTracer in pure <span className="font-extrabold text-orange-300">C++</span> using only SFML lib for rendering, making use of a <span className="font-extrabold text-orange-300">BVH and multi-threading</span> for optimizations. Made in 2 weeks alone.
+      </>
+    ),
     media: {
       type: "image" as const,
-      src: projectPhysics,
+      src: projectRaytracer,
     },
-    tags: ["C++", "Physics", "SIMD"],
+    tags: ["C++", "RayTracing", "BVH", "SFML"],
     links: {
-      github: "#",
+      github: "https://github.com/HotAsWater/RayTracer",
     },
   },
   {
-    title: "Retro Platformer",
-    description: "A precision platformer inspired by classic NES games, featuring tight controls and challenging level design.",
+    title: "2D Platformer - Prototype",
+    description: (
+      <>
+        A 2D winter themed platformer prototype made in <span className="font-extrabold text-orange-300">Unity</span> during a <span className="font-extrabold text-orange-300">2 days Game Jam</span>.<br /> Making use of <span className="font-extrabold text-orange-300">shaders, lights and particle effects</span> as well as core Unity mechanics
+      </>
+    ),
     media: {
-      type: "image" as const,
+      type: "video" as const,
       src: projectPlatformer,
     },
-    tags: ["C++", "SDL2", "Pixel Art"],
-    links: {
-      itch: "#",
-      github: "#",
-    },
+    tags: ["C#", "Unity"],
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 md:py-32 px-6">
+    <section id="projects" className="py-24 md:py-32 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-mono font-semibold mb-12 text-primary">
-          _projects
+        <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-mono tracking-tight mb-12 animate-fade-up-delay-1">
+          <span className="text-gradient">Projects</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col gap-20">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
