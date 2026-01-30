@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 import projectEngine from "@/assets/project-engine.jpg";
 import projectRtype from "@/assets/project-rtype.gif";
 import projectRaytracer from "@/assets/project-raytracer.jpg";
-import projectPlatformer from "@/assets/project-2d-platformer.mov";
+import projectPlatformer from "@/assets/project-2d-platformer.gif";
 
 const projects = [
   {
@@ -60,10 +60,13 @@ const projects = [
       </>
     ),
     media: {
-      type: "video" as const,
+      type: "gif" as const,
       src: projectPlatformer,
     },
     tags: ["C#", "Unity"],
+    links: {
+      demo: "https://youtu.be/BIJsjm6Un-s",
+    },
   },
 ];
 
