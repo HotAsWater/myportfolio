@@ -38,7 +38,7 @@ const ProjectCard = ({ title, description, media, tags, links }: ProjectCardProp
 
   return (
     <div
-      className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 glow-border-hover hover:border-primary/30"
+      className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300  hover:border-primary/30"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

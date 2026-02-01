@@ -3,11 +3,16 @@ import projectEngine from "@/assets/project-engine.jpg";
 import projectRtype from "@/assets/project-rtype.gif";
 import projectRaytracer from "@/assets/project-raytracer.jpg";
 import projectPlatformer from "@/assets/project-2d-platformer.gif";
+import projectRpg2D from "@/assets/project-rpg.mov";
 
 const projects = [
   {
     title: "Custom Game Engine (ECS)",
-    description: "A lightweight 2D/3D game engine built from scratch in C++ with SFML rendering, ECS architecture, and custom physics.",
+    description: (
+      <>
+        A lightweight 2D game engine built from scratch in <span className="font-extrabold text-orange-300">C++</span> with SFML rendering, ECS architecture, and custom <span className="font-extrabold text-orange-300">physics, network and input systems</span>.
+      </>
+    ),
     media: {
       type: "image" as const,
       src: projectEngine,
@@ -66,6 +71,39 @@ const projects = [
     tags: ["C#", "Unity"],
     links: {
       demo: "https://youtu.be/BIJsjm6Un-s",
+    },
+  },
+  {
+    title: "2D Platformer - Prototype",
+    description: (
+      <>
+        A 2D winter themed platformer prototype made in <span className="font-extrabold text-orange-300">Unity</span> during a <span className="font-extrabold text-orange-300">2 days Game Jam</span>.<br /> Making use of <span className="font-extrabold text-orange-300">shaders, lights and particle effects</span> as well as core Unity mechanics
+      </>
+    ),
+    media: {
+      type: "gif" as const,
+      src: projectPlatformer,
+    },
+    tags: ["C#", "Unity"],
+    links: {
+      demo: "https://youtu.be/BIJsjm6Un-s",
+    },
+  },
+  {
+    title: "Small 2D RPG",
+    description: (
+      <>
+        Creation of a small 2D <span className="font-extrabold text-orange-300">RPG</span> during the last 2 month of my first school year. Using only <span className="font-extrabold text-orange-300">C and the SFML</span> librairy for rendering. This was a team project of 2 person lasting 1 month.<br /><br />
+        <span className="font-extrabold text-orange-300">What I made:</span> All menu UI/logic (inventory, save & sound systems, spell book...), sprites animations, player collision with map, entities, custom event, NPC quest.
+      </>
+    ),
+    media: {
+      type: "video" as const,
+      src: projectRpg2D,
+    },
+    tags: ["C", "SFML", "UI", "SFML", "Team Project"],
+    links: {
+      demo: "https://youtu.be/-ItbgcpxArk",
     },
   },
 ];

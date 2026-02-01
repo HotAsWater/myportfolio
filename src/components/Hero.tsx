@@ -9,7 +9,7 @@ const Hero = () => {
       
       {/* Warm glow effect */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/40 rounded-full blur-[150px] animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/40 rounded-full blur-[120px] animate-glow-pulse" />
+      {/*<div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/40 rounded-full blur-[120px] animate-glow-pulse" />*/}
       
       {/* Content - Left aligned */}
       <div className="relative z-10 px-6 max-w-4xl mx-auto w-full pt-24">
