@@ -35,7 +35,7 @@ const projects = [
       type: "gif" as const,
       src: projectRtype,
     },
-    tags: ["C++", "UDP", "TCP", "ECS", "SFML", "QT", "SFML", "Gameplay Programming", "Team Project"],
+    tags: ["C++", "UDP", "TCP", "ECS", "SFML", "QT", "Gameplay Programming", "Team Project"],
     links: {
       github: "https://github.com/HotAsWater/ECS-RType",
       demo: "https://youtu.be/2Fgwh5xcTw0",
@@ -74,22 +74,6 @@ const projects = [
     },
   },
   {
-    title: "2D Platformer - Prototype",
-    description: (
-      <>
-        A 2D winter themed platformer prototype made in <span className="font-extrabold text-orange-300">Unity</span> during a <span className="font-extrabold text-orange-300">2 days Game Jam</span>.<br /> Making use of <span className="font-extrabold text-orange-300">shaders, lights and particle effects</span> as well as core Unity mechanics
-      </>
-    ),
-    media: {
-      type: "gif" as const,
-      src: projectPlatformer,
-    },
-    tags: ["C#", "Unity"],
-    links: {
-      demo: "https://youtu.be/BIJsjm6Un-s",
-    },
-  },
-  {
     title: "Small 2D RPG",
     description: (
       <>
@@ -101,7 +85,7 @@ const projects = [
       type: "video" as const,
       src: projectRpg2D,
     },
-    tags: ["C", "SFML", "UI", "SFML", "Team Project"],
+    tags: ["C", "SFML", "UI", "RPG", "Team Project"],
     links: {
       demo: "https://youtu.be/-ItbgcpxArk",
     },

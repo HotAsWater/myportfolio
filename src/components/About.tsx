@@ -1,3 +1,5 @@
+import Me from "@/assets/me.jpg";
+
 const About = () => {
   return (
     <section
@@ -13,7 +15,7 @@ const About = () => {
           {/* Photo */}
           <div className="relative mt-20">
             <img
-              src="/src/assets/IMG_2505.png"
+              src={Me}
               alt="Raphaël Maigret"
               className="w-full rounded-xl border border-border object-cover"
             />
